@@ -90,10 +90,10 @@ public class BankAccountGUI extends JFrame {
             account.deposit(amount);
             updateBalance();
             showMessage("✅ Deposited ₹" + amount + " successfully!", new Color(0, 128, 0));
-        } catch (IllegalArgumentException ex) {
-            showMessage("❌ " + ex.getMessage(), Color.RED);
         } catch (NumberFormatException ex) {
             showMessage("❌ Please enter a valid number!", Color.RED);
+        } catch (IllegalArgumentException ex) {
+            showMessage("❌ " + ex.getMessage(), Color.RED);
         }
     }
 
